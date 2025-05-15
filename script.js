@@ -20,7 +20,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       let sensitivity = parseInt(sensitivityInput.value, 10);
       let adjustedVolume = Math.min(100, volume * sensitivity);
 
-      bar.style.width = `${adjustedVolume}%`;
+      bar.style.height = `${adjustedVolume}%`;
       bar.style.backgroundColor =
         adjustedVolume < 40 ? 'green' :
         adjustedVolume < 70 ? 'yellow' : 'red';
