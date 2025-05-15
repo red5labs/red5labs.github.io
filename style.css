@@ -12,10 +12,9 @@ h1 {
 
 .monster-container {
   position: relative;
-  display: inline-block;
-  margin: 20px auto;
-  width: 250px;
-  height: 350px;
+  width: 300px;
+  height: auto;
+  margin: 0 auto 30px;
 }
 
 .monster-img {
@@ -24,14 +23,24 @@ h1 {
   display: block;
 }
 
-#monster-bar {
+/* Bar container positioned over the monster’s belly */
+#monster-bar-container {
   position: absolute;
-  bottom: 80px; /* adjust this based on the belly location */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
+  bottom: 90px; /* Adjust to line up with belly */
+  left: 65px;    /* Adjust to center horizontally */
+  width: 170px;
   height: 30px;
-  background-color: green;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px #00000050;
+}
+
+/* Horizontal bar that fills left to right */
+#monster-bar {
+  height: 100%;
+  width: 0%;
+  background-color: green;
+  border-radius: 15px 0 0 15px;
   transition: width 0.1s, background-color 0.2s;
 }
