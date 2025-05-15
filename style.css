@@ -27,7 +27,7 @@ h1 {
 /* Belly bar container */
 #monster-bar-container {
   position: absolute;
-  bottom: 65px;              /* Adjust to align with belly */
+  bottom: 70px;              /* Adjust to align with belly */
   left: 50%;
   transform: translateX(-50%);
   width: 750px;
