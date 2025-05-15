@@ -27,11 +27,11 @@ h1 {
 /* Belly bar container */
 #monster-bar-container {
   position: absolute;
-  bottom: 100px;              /* Adjust to align with belly */
+  bottom: 95px;              /* Adjust to align with belly */
   left: 50%;
   transform: translateX(-50%);
   width: 145px;
-  height: 130px;             /* Match belly height */
+  height: 120px;             /* Match belly height */
   background: rgba(255, 255, 255, 0.15); /* Optional soft background */
   border-radius: 30px;
   overflow: hidden;
