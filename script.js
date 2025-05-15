@@ -1,4 +1,4 @@
-const bar = document.getElementById('bar');
+const bar = document.getElementById('monster-bar');
 const sensitivityInput = document.getElementById('sensitivity');
 
 navigator.mediaDevices.getUserMedia({ audio: true })
@@ -8,7 +8,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     const analyser = context.createAnalyser();
     mic.connect(analyser);
     const data = new Uint8Array(analyser.fftSize);
-    
+
     function update() {
       analyser.getByteTimeDomainData(data);
       let sum = 0;
@@ -20,7 +20,6 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       let sensitivity = parseInt(sensitivityInput.value, 10);
       let adjustedVolume = Math.min(100, volume * sensitivity);
 
-      // Update bar
       bar.style.width = `${adjustedVolume}%`;
       bar.style.backgroundColor =
         adjustedVolume < 40 ? 'green' :
@@ -32,4 +31,3 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     update();
   })
   .catch(err => alert("Microphone access is required."));
-
