@@ -1,24 +1,37 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
   background-color: #1976D2;
+  font-family: Arial, sans-serif;
   color: white;
-  margin-top: 50px;
+  text-align: center;
+  margin-top: 30px;
 }
 
-#visualizer {
-  width: 300px;
-  height: 40px;
-  background: #eee;
-  margin: 20px auto;
+h1 {
+  font-size: 3rem;
+}
+
+.monster-container {
   position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+  display: inline-block;
+  margin: 20px auto;
+  width: 250px;
+  height: 350px;
 }
 
-.bar {
-  height: 100%;
-  width: 0%;
+.monster-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#monster-bar {
+  position: absolute;
+  bottom: 80px; /* adjust this based on the belly location */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 30px;
   background-color: green;
+  border-radius: 15px;
   transition: width 0.1s, background-color 0.2s;
 }
