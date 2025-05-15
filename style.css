@@ -30,7 +30,7 @@ h1 {
   bottom: 70px;              /* Adjust to align with belly */
   left: 50%;
   transform: translateX(-50%);
-  width: 750px;
+  width: 75px;
   height: 80px;             /* Match belly height */
   background: rgba(255, 255, 255, 0.15); /* Optional soft background */
   border-radius: 30px;
